@@ -1,0 +1,9 @@
+{
+  "name": "Calc",
+  "entry": "index.html",
+  "description": "Uses natural language processing to evaluate math expressions.",
+  "command": {
+    "name": "Evaluate Math Expressions",
+    "cmd": ":calc"
+  }
+}
