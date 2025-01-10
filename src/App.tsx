@@ -32,14 +32,22 @@ export function App() {
   }, [ipValue]);
 
   return (
-    <div className="flex w-full h-full">
-      <div className="grid place-content-center w-1/2 text-4xl p-4">
-        <p className="break-all">{expression || "Expression"}</p>
+    <div className="relative h-full">
+      <div className="flex w-full h-[270px]">
+        <div className="grid place-content-center w-1/2 text-4xl p-4">
+          <p className="break-all">{expression || "Expression"}</p>
+        </div>
+        <Separator orientation="vertical" />
+        <div className="grid place-content-center w-1/2 text-4xl p-4">
+          <p className="break-all">{result || "Result"}</p>
+        </div>
       </div>
-      <Separator orientation="vertical" />
-      <div className="grid place-content-center w-1/2 text-4xl p-4">
-        <p className="break-all">{result || "Result"}</p>
-      </div>
+      <footer className="absolute bottom-0 left-0 right-0 bg-[#1e2022] h-14 px-2 flex items-center">
+        <Separator className="absolute top-0 left-0 right-0 h-px bg-white/20" />
+        <div className="flex gap-4 items-center">
+          Evaluate Math Expressions and convert metric units
+        </div>
+      </footer>
     </div>
   );
 }
